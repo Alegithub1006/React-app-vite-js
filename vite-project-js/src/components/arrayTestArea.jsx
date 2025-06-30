@@ -39,7 +39,6 @@ export function TestInmutabilidad() {
         // Eliminar "🐱" específicamente
         setAnimales((currentAnimal =>currentAnimal.filter(item => item !== "🐱")))
         }
-    };
 
     const duplicarLista = () => {
         // Duplicar toda la lista (agregar una copia de sí misma)
