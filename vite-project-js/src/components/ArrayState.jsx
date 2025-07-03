@@ -42,19 +42,25 @@ export function ArrayState() {
 
   return (
     <div>
+        <div className={'flex flex-wrap gap-2'}>
       <button onClick={RemoveFirtsElement}>remove first element</button>
+        <div className={'w-2 h-10'}></div>
       <button onClick={() => RemoveSpecificElement("B")}>remove all B</button>
+        <div className={'w-2 h-10'}></div>
         <button onClick={() => AddNewElementStart("Y")}>add letter to start</button>
+        <div className={'w-2 h-10'}></div>
         <button onClick={() => AddNewElementEnd("X")}>add letter to end</button>
+        <div className={'w-2 h-10'}></div>
         <button onClick={ClearAllElement}>CLear All list </button>
+        <div className={'w-2 h-10'}></div>
         <button onClick={ResetElementListToStart}>Reset list to start</button>
+        <div className={'w-2 h-10'}></div>
         <button onClick={() => ChangeElement("A","M")}>Change A by 'M'</button>
-        <br/>
-        <br/>
-        <input value={value} onChange={e =>setValue(e.target.value)}/>
+        <div className={'w-2 h-10'}></div>
+        <input className={'bg-blue-500'} type={'text'} value={value} onChange={e =>setValue(e.target.value)}/>
         <button onClick={()=>{AddNewElementStart(value)}}>add value to array</button>
 
-    <div></div>
+    </div>
         {array.join(", ")}
     </div>
   );

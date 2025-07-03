@@ -12,11 +12,14 @@ import { Counter } from "./components/Counter.jsx";
 import CounterClass from "./components/CounterClass.jsx";
 import { ArrayState } from "./components/ArrayState.jsx";
 import {TestInmutabilidad} from "./components/arrayTestArea.jsx";
+import CounterWithName, {UserProfile} from "./Projects/CounterWithName.jsx";
+import LifeCicle from "../LifeCicleComponent.jsx";
+import {UseEffect} from "../useEffect.jsx";
 
 function App() {
   return (
     <section>
-      <ArrayState />
+      <UseEffect/>
 
     </section>
   );
