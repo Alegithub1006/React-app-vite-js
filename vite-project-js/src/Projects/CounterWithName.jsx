@@ -1,9 +1,28 @@
-import {useState} from "react";
+import {useEffect, useState} from "react";
 import React from "react";
 
 export default function CounterWithName() {
     const [name, setName]= useState("");
     const [age, setAge]= useState(0);
+
+    useEffect(()=>{
+        console.log("**RE-RENDER**")
+    })
+    useEffect(()=>{
+        console.log("HI")
+        return(()=>{console.log("BYE")})
+    },[])
+    useEffect(()=>{
+        console.log(`hi my name is ${name}, i am ${age} years old`)
+    },[name, age])
+    useEffect(()=>{
+        document.title = name
+
+        const timeout = setTimeout(()=>{console.log(`hi my name is ${name}`)}, 1000)
+        return(()=>{
+            clearTimeout(timeout)
+        })
+    },[name])
 
     function  HandleReduceNumber(){
         setAge((currentAge=>currentAge - 1))

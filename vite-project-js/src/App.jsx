@@ -13,13 +13,14 @@ import CounterClass from "./components/CounterClass.jsx";
 import { ArrayState } from "./components/ArrayState.jsx";
 import {TestInmutabilidad} from "./components/arrayTestArea.jsx";
 import CounterWithName, {UserProfile} from "./Projects/CounterWithName.jsx";
-import LifeCicle from "../LifeCicleComponent.jsx";
-import {UseEffect} from "../useEffect.jsx";
+import LifeCicle from "./Projects/useEffectHook.jsx";
+import {UseEffect} from "./components/useEffect.jsx";
+import ToDoList from "./Projects/TodoList.jsx";
 
 function App() {
   return (
     <section>
-      <UseEffect/>
+      <ToDoList/>
 
     </section>
   );

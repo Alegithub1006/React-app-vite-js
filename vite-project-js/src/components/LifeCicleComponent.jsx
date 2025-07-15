@@ -1,5 +1,5 @@
 import {useState} from "react";
-import CounterWithName from "./src/Projects/CounterWithName.jsx";
+import CounterWithName from "../Projects/CounterWithName.jsx";
 
 
 export default function LifeCicle(){

@@ -7,7 +7,19 @@ export function UseEffect(){
     const [age, setAge]= useState(0);
     const [width, setWidth] = useState(window.innerWidth)
 
-    useEffect(()=>{
+      useEffect(()=>{
+          const handler=() => {
+              console.log(name)
+          }
+          document.addEventListener("click", handler)
+
+          return()=>{
+              document.removeEventListener("click", handler)
+          }
+      }, [name])
+
+
+      useEffect(()=>{
         console.log("change age", age)
     }, [age])
 
